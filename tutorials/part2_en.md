@@ -92,11 +92,11 @@ Follow this guide: [GNS3 Linux Install](https://docs.gns3.com/docs/getting-start
 
 2. To link the devices, click on the corresponding icon in the left toolbar:
 
-   <img src="./assets/p2/gns3_link_icon.png" alt="Icon list to create link" height="400"/>
+   <img src="/tutorials/assets/p2/gns3_link_icon.png" alt="Icon list to create link" height="400"/>
 
    You have to select the network interfaces as required in the assignment. Set the hosts number of network adaptaters to match the schema.
 
-   <img src="./assets/p2/gns3_create_link.png" alt="Linking devices" height="400"/>
+   <img src="/tutorials/assets/p2/gns3_create_link.png" alt="Linking devices" height="400"/>
 
    For more clarity, you can show the interface labels from the top toolbar (the icon with "ABC" on it).
 

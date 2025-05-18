@@ -92,11 +92,11 @@ Suivez ce guide : [GNS3 Linux Install](https://docs.gns3.com/docs/getting-starte
 
 2. Pour relier les appareils, cliquez sur l'icône correspondante dans la barre d'outils à gauche :
 
-   <img src="./assets/p2/gns3_link_icon.png" alt="Liste des icônes pour créer un lien" height="400"/>
+   <img src="/tutorials/assets/p2/gns3_link_icon.png" alt="Liste des icônes pour créer un lien" height="400"/>
 
    Vous devez sélectionner les interfaces réseau comme spécifié dans le sujet. Ajustez le nombre d'adaptateurs réseau des hôtes pour correspondre au schéma.
 
-   <img src="./assets/p2/gns3_create_link.png" alt="Connexion des appareils" height="400"/>
+   <img src="/tutorials/assets/p2/gns3_create_link.png" alt="Connexion des appareils" height="400"/>
 
    Pour plus de clarté, vous pouvez afficher les étiquettes des interfaces à partir de la barre d'outils en haut (l'icône avec "ABC").
 

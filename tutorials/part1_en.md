@@ -52,11 +52,11 @@ Follow this guide: [GNS3 Linux Install](https://docs.gns3.com/docs/getting-start
 
 3. Now, time to add **Docker templates** to GNS3. In the menu bar, click on `Edit` > `Preferences`. A new window will open. In the left menu, select `Docker containers`.
 
-   <img src="./assets/p1/gns3_settings_preferences.png" alt="GNS3 preferences" height="400"/>
+   <img src="/tutorials/assets/p1/gns3_settings_preferences.png" alt="GNS3 preferences" height="400"/>
 
 4. Click on `New` and select the Alpine image from the list.
 
-   <img src="./assets/p1/gns3_new_docker_container.png" alt="Add new Docker container in GNS3" height="400"/>
+   <img src="/tutorials/assets/p1/gns3_new_docker_container.png" alt="Add new Docker container in GNS3" height="400"/>
 
    Configure the template. Name it with your 42 username as follows: `host_<username>`. Since it will be used as a host, this machine only needs one network adapter. However, let's set the default number of adapter to 2 since the project requires so.
 
@@ -64,11 +64,11 @@ Follow this guide: [GNS3 Linux Install](https://docs.gns3.com/docs/getting-start
 
 6. Continue configuring the templates. Display the available devices by clicking the corresponding icons in the left menu:
 
-   <img src="./assets/p1/gns3_device_menu.png" alt="GNS3 device list" height="400"/>
+   <img src="/tutorials/assets/p1/gns3_device_menu.png" alt="GNS3 device list" height="400"/>
 
    The router doesn't look like one. Right-click on it and select `Configure template`. Find the `Symbol` field and select the icon required in the assignment.
 
-   <img src="./assets/p1/gns3_icon_list.png" alt="Icon list for devices" height="400"/>
+   <img src="/tutorials/assets/p1/gns3_icon_list.png" alt="Icon list for devices" height="400"/>
 
 ### 3. Create the network
 

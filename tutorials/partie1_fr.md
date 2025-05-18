@@ -52,11 +52,11 @@ Les conteneurs **Docker** sont utilisés comme des machines virtuelles légères
 
 3. Ajoutez les **templates Docker** à GNS3. Dans la barre de menu, cliquez sur `Edit` > `Preferences`. Une nouvelle fenêtre s'ouvre. Dans le menu de gauche, sélectionnez `Docker containers`.
 
-   <img src="./assets/p1/gns3_settings_preferences.png" alt="Préférences GNS3" height="400"/>
+   <img src="/tutorials/assets/p1/gns3_settings_preferences.png" alt="Préférences GNS3" height="400"/>
 
 4. Cliquez sur `Nouveau` et sélectionnez l'image Alpine dans la liste.
 
-   <img src="./assets/p1/gns3_new_docker_container.png" alt="Ajouter un conteneur Docker dans GNS3" height="400"/>
+   <img src="/tutorials/assets/p1/gns3_new_docker_container.png" alt="Ajouter un conteneur Docker dans GNS3" height="400"/>
 
    Configurez le template. Nommez-le avec votre identifiant 42 comme suit : `host_<username>`. Comme il s'agit d'un hôte, il n'a théoriquement besoin que d'un seul adaptateur réseau. Toutefois, définissez-en 2 par défaut pour les besoins du sujet.
 
@@ -64,11 +64,11 @@ Les conteneurs **Docker** sont utilisés comme des machines virtuelles légères
 
 6. Continuons à configurer les templates. Affichez les équipements disponibles en cliquant sur les icônes dans le menu de gauche :
 
-   <img src="./assets/p1/gns3_device_menu.png" alt="Liste des équipements GNS3" height="400"/>
+   <img src="/tutorials/assets/p1/gns3_device_menu.png" alt="Liste des équipements GNS3" height="400"/>
 
    Le routeur ne ressemble pas à un routeur. Faites un clic droit dessus, sélectionnez `Configure template`, trouvez le champ `Symbol` et choisissez l'icône demandée dans le sujet.
 
-   <img src="./assets/p1/gns3_icon_list.png" alt="Liste des icônes" height="400"/>
+   <img src="/tutorials/assets/p1/gns3_icon_list.png" alt="Liste des icônes" height="400"/>
 
 ### 3. Créer le réseau
 
