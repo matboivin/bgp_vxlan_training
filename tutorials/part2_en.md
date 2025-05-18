@@ -1,6 +1,6 @@
 # Part 2
 
-The goal of this section is to introduce VXLAN, which is widely used today to meet evolving technological demands and integrates better into modern architectures (virtualized, distributed, and cloud-native). **What are VXLAN benefits?**
+The goal of this section is to introduce **VXLAN**, which is widely used today to meet evolving technological demands and integrates better into modern architectures (virtualized, distributed, and cloud-native). **What are VXLAN benefits?**
 
 Improved scalability through larger addressing space:
 
@@ -16,8 +16,8 @@ The [first part](#3-unicast) shows how to manually configure a VXLAN tunnel with
 
 ## Table of Content
 
-- [Requirements](#requirements)
 - [Conventions and Best Practices](#conventions-and-best-practices)
+- [Requirements](#requirements)
 - [Walkthrough](#walkthrough)
     1. [Set up GNS3](#1-set-up-gns3)
     2. [Create the network](#2-create-the-network)
