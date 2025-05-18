@@ -1,8 +1,9 @@
 #!/bin/sh
-# Configure leaf router for Part 3
+# Configure leaf 3 router for Part 3
+LOCAL_IP="10.1.1.4"
 
 # Create VXLAN tunnel
-/sbin/ip link add name vxlan10 type vxlan id 10 dstport 4789
+/sbin/ip link add name vxlan10 type vxlan id 10 dstport 4789 local $LOCAL_IP
 # Up VXLAN tunnel
 /sbin/ip link set dev vxlan10 up
 

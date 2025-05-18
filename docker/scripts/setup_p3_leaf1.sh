@@ -1,0 +1,17 @@
+#!/bin/sh
+# Configure leaf router 1 for Part 3
+LOCAL_IP="10.1.1.2"
+
+# Create VXLAN tunnel
+/sbin/ip link add name vxlan10 type vxlan id 10 dstport 4789 local $LOCAL_IP
+# Up VXLAN tunnel
+/sbin/ip link set dev vxlan10 up
+
+# Create bridge
+/sbin/ip link add br0 type bridge
+# Up bridge
+/sbin/ip link set dev br0 up
+
+# Attach interfaces to bridge
+/sbin/ip link set vxlan10 master br0
+/sbin/ip link set eth1 master br0
