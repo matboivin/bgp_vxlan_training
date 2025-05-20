@@ -6,6 +6,8 @@ This part is about discovering BGP EVPN's application to VXLAN. Our case is a sm
 
 **BGP EVPN** is the [control plane](https://www.ibm.com/think/topics/control-plane) that defines and controls how data is forwarded in the network.
 
+If we wanted all routes to be known by every router in our data center, we would need to set up a full mesh. However, this solution is not scalable. A more flexible approach is to configure a **route reflector** responsible for distributing the learned routes to its iBGP peers.
+
 > 💡 We are not interested in eBGP, but only in iBGP, which is used within an AS to connect internal routers. However, we could use eBGP by simulating two ASes using private AS numbers (range 64512–65534) without making any announcements to the Internet.
 
 ## Table of Content
@@ -66,6 +68,8 @@ Follow this guide: [GNS3 Linux Install](https://docs.gns3.com/docs/getting-start
 
    <img src="/tutorials/assets/p3/gns3_topology.png" alt="Topology" height="400"/>
 
+   As you can see, I changed the way network interfaces are connected to each other. I find it more simple. Leaves are linked to the spine with `eth0` and to the hosts with `eth1`.
+
 3. Choose the IP addresses to use:
 
    | **Device**            | **Interface** | **IP address**  |
@@ -76,9 +80,9 @@ Follow this guide: [GNS3 Linux Install](https://docs.gns3.com/docs/getting-start
    | Router-1 (RR / Spine) | `lo`          | 10.1.1.1/32     |
    | Router-2 (Leaf-1)     | `eth0`        | 192.168.1.10/24 |
    | Router-2 (Leaf-1)     | `lo`          | 10.1.1.2/32     |
-   | Router-3 (Leaf-2)     | `eth1`        | 192.168.1.20/24 |
+   | Router-3 (Leaf-2)     | `eth0`        | 192.168.1.20/24 |
    | Router-3 (Leaf-2)     | `lo`          | 10.1.1.3/32     |
-   | Router-4 (Leaf-3)     | `eth2`        | 192.168.1.30/24 |
+   | Router-4 (Leaf-3)     | `eth0`        | 192.168.1.30/24 |
    | Router-4 (Leaf-3)     | `lo`          | 10.1.1.4/32     |
    | Host-1                | `eth1`        | 30.1.1.1/24     |
    | Host-2                | `eth0`        | 30.1.1.2/24     |
@@ -150,11 +154,11 @@ Follow this guide: [GNS3 Linux Install](https://docs.gns3.com/docs/getting-start
    /sbin/ip link add name vxlan10 type vxlan id 10 dstport 4789 local <loopback_IP_address>
    /sbin/ip link set dev vxlan10 up
 
-   /sbin/ip link add br0 type bridge
-   /sbin/ip link set dev br0 up
+   /sbin/ip link add br10 type bridge
+   /sbin/ip link set dev br10 up
 
-   /sbin/ip link set vxlan10 master br0
-   /sbin/ip link set eth1 master br0
+   /sbin/ip link set vxlan10 master br10
+   /sbin/ip link set eth1 master br10
    ```
 
 2. For each router, configure the **OSPF router**.
@@ -166,7 +170,7 @@ Follow this guide: [GNS3 Linux Install](https://docs.gns3.com/docs/getting-start
    ```vtysh
    router ospf
      ospf router-id 10.1.1.1
-     network 10.1.1.2/32 area 0
+     network 10.1.1.1/32 area 0
      network 192.168.1.0/24 area 0
    !
    ```

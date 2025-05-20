@@ -8,10 +8,10 @@ LOCAL_IP="10.1.1.3"
 /sbin/ip link set dev vxlan10 up
 
 # Create bridge
-/sbin/ip link add br0 type bridge
+/sbin/ip link add br10 type bridge
 # Up bridge
-/sbin/ip link set dev br0 up
+/sbin/ip link set dev br10 up
 
 # Attach interfaces to bridge
-/sbin/ip link set vxlan10 master br0
-/sbin/ip link set eth1 master br0
+/sbin/ip link set vxlan10 master br10
+/sbin/ip link set eth1 master br10
