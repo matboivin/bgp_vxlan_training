@@ -14,7 +14,7 @@ This repository contains:
 - [docs](/docs/): Documentation, resources and notes (both in French and English).
 - [docker](/docker/): The Docker configuration for the project.
 
-There are also personal notes about good practices I discovered. Sometimes, I disagreed with the assignment or tutorials details and wrote about it.
+There are also personal notes about good practices I discovered. Sometimes, I disagreed with the assignment or tutorials details and wrote about it. For example, IS-IS seems useless, there is no need to give an IP address to the VXLAN interface, and the naming (the bridge for instance) could be more consistent to help for debugging.
 
 ## Acknowledgements
 
